@@ -1,0 +1,171 @@
+:root {
+  --primary: #ffbf00;
+  --bg: #2f4f4f;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+  background-color: var(--bg);
+}
+
+h1 {
+  color: var(--primary);
+}
+
+#tombol-tambah,
+#toggle-tabel {
+  padding: 10px 15px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#tombol-tambah:hover,
+#toggle-tabel:hover {
+  background-color: #d99e00;
+}
+
+/* Efek animasi pada input-container */
+.input-container {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
+}
+
+.input-container.show {
+  opacity: 1;
+  visibility: visible;
+  max-height: 500px;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+  width: 280px;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d99e00;
+}
+
+.table-container {
+  overflow-x: auto;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
+}
+
+.table-container.show {
+  opacity: 1;
+  visibility: visible;
+  max-height: 500px; /* Sesuaikan dengan tinggi tabel */
+}
+
+table {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+td button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+td button:hover {
+  background-color: darkred;
+}
+
+.search-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.clear-icon {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  color: gray;
+}
+
+.result-box {
+  width: 100%;
+  background: #f8f9fa;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  text-align: left;
+  min-height: 50px;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid #ddd;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kamus Bahasa Daerah Belitung" />
+    <title>Kamus Bahasa Daerah</title>
+    <link rel="stylesheet" href="belajar.css" />
+  </head>
+  <body>
+    <h1>Kamus Bahasa Belitung</h1>
+
+    <button id="tombol-tambah">+</button>
+    <button id="toggle-tabel">👁️</button>
+    <!-- Tombol untuk menampilkan/menyembunyikan tabel -->
+
+    <div class="input-container">
+      <label for="kata-daerah">Kata Daerah:</label>
+      <input
+        type="text"
+        id="kata-daerah"
+        placeholder="Masukkan kata daerah..."
+      />
+
+      <label for="kata-indonesia">Terjemahan Indonesia:</label>
+      <input
+        type="text"
+        id="kata-indonesia"
+        placeholder="Masukkan terjemahan Indonesia..."
+      />
+
+      <button id="tambah-kata">Tambah</button>
+    </div>
+
+    <div class="search-container">
+      <div class="search-box">
+        <label for="cari-belitung">Terjemahkan Kata:</label>
+        <input type="text" id="cari-belitung" placeholder="Masukkan kata..." />
+        <span class="clear-icon" id="clear-search">❌</span>
+      </div>
+      <div class="result-box">
+        <p id="hasil-terjemahan">Terjemahan akan muncul di sini...</p>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <table id="kamus-table">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Kata Daerah</th>
+            <th>Terjemahan Indonesia</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script src="kamus.js"></script>
+    <script src="js/script.js"></script>
+    <!-- JavaScript Eksternal -->
+  </body>
+</html>
