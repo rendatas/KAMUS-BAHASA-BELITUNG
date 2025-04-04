@@ -167,8 +167,17 @@ body {
   flex: 1 1 45rem;
 }
 
-.about .row .about-img {
+.about .row .about-img img {
   width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* tambahan baru row reverse */
+.about .row.reverse {
+  flex-direction: row-reverse;
 }
 
 .about .row .content {
@@ -257,11 +266,27 @@ body {
   position: relative;
   z-index: 9999;
 }
+
 /* tablet */
 
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
+  }
+
+  .about .row,
+  .about .row.reverse {
+    flex-direction: column;
+  }
+  .about.row .about-img,
+  .about .row .content {
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .about .row .content {
+    padding-top: 0;
   }
 
   #hamburger-menu {
